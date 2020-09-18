@@ -105,11 +105,11 @@
 		ctx.strokeText('巡检负责人：' + $('#name8').val(), 455, 350);
 		ctx.strokeText('保养责任人：' + $('#name10').val(), 455, 435);
         
-		ctx.font = "normal " + $('size1').val() + "px '思源黑体 CN'";
+		ctx.font = "normal " + $('#size1').val() + "px '思源黑体 CN'";
 		ctx.strokeText('设备名称：' + $('#name1').val(), 65, 155);
-		ctx.font = "normal " + $('size2').val() + "px '思源黑体 CN'";
+		ctx.font = "normal " + $('#size2').val() + "px '思源黑体 CN'";
 		ctx.strokeText('规格型号：' + $('#name2').val(), 65, 200);
-		ctx.font = "normal " + $('size3').val() + "px '思源黑体 CN'";
+		ctx.font = "normal " + $('#size3').val() + "px '思源黑体 CN'";
 		ctx.strokeText('保养部门：' + $('#name9').val(), 455, 390);
         
 		$('#result').attr('src', canvas1.toDataURL('image/png'));

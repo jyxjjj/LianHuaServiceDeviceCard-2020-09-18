@@ -54,6 +54,12 @@
 	<br/>
 	保养责任人：<input type="text" id="name10" value="">
 	<br/>
+	设备名称字体大小：<input type="text" id="size1" value="25">
+	<br/>
+	规格型号字体大小：<input type="text" id="size2" value="25">
+	<br/>
+	保养部门字体大小：<input type="text" id="size3" value="25">
+	<br/>
 	<button type="button" onclick="ok();">OK</button>
 	<br/>
 </div>
@@ -90,8 +96,12 @@
         
 		ctx.font = "normal 25px '思源黑体 CN'";
         
+		ctx.font = "normal " + $('size1').val() + "px '思源黑体 CN'";
 		ctx.fillText('设备名称：' + $('#name1').val(), 65, 155);
+        
+		ctx.font = "normal " + $('size2').val() + "px '思源黑体 CN'";
 		ctx.fillText('规格型号：' + $('#name2').val(), 65, 200);
+        
 		ctx.fillText('主要性能技术参数：', 65, 245);
         
 		ctx.drawImage($('#qr')[0], 65, 265);
@@ -101,7 +111,10 @@
 		ctx.fillText('使用日期：' + $('#name6').val(), 455, 250);
 		ctx.fillText('巡检部门：' + $('#name7').val(), 455, 300);
 		ctx.fillText('巡检负责人：' + $('#name8').val(), 455, 350);
+        
+		ctx.font = "normal " + $('size3').val() + "px '思源黑体 CN'";
 		ctx.fillText('保养部门：' + $('#name9').val(), 455, 390);
+        
 		ctx.fillText('保养责任人：' + $('#name10').val(), 455, 435);
         
 		$('#result').attr('src', canvas1.toDataURL('image/png'));
